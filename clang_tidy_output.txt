@@ -1,0 +1,45 @@
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//clang.c:1:16: warning: declaration of 'struct fred_t' will not be visible outside of this function [clang-diagnostic-visibility]
+void f1(struct fred_t *p)
+               ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//clang.c:5:14: error: incomplete definition of type 'struct fred_t' [clang-diagnostic-error]
+    int x = p->x;
+             ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//clang.c:1:16: note: forward declaration of 'struct fred_t'
+void f1(struct fred_t *p)
+               ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//clang.c:7:9: warning: implicit declaration of function 'do_something' is invalid in C99 [clang-diagnostic-implicit-function-declaration]
+        do_something(x);
+        ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//clang.c:12:21: error: use of undeclared identifier 'NULL' [clang-diagnostic-error]
+    const char *p = NULL;
+                    ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//clang.c:13:21: error: use of undeclared identifier 'str' [clang-diagnostic-error]
+    for (int i = 0; str[i] != '\0'; i++)
+                    ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//clang.c:15:13: error: use of undeclared identifier 'str' [clang-diagnostic-error]
+        if (str[i] == ' ')
+            ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//clang.c:17:17: error: use of undeclared identifier 'str' [clang-diagnostic-error]
+            p = str + i;
+                ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//clang.c:29:24: error: use of undeclared identifier 'NULL' [clang-diagnostic-error]
+    struct fred_t *p = NULL;
+                       ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//clang.c:31:13: error: use of undeclared identifier 'fred1' [clang-diagnostic-error]
+        p = fred1;
+            ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//test-clang.c:1:1: error: unknown type name 'test' [clang-diagnostic-error]
+test-clang.c
+^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//test-clang.c:1:5: error: expected identifier or '(' [clang-diagnostic-error]
+test-clang.c
+    ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//test2.c:7:8: warning: Dereference of undefined pointer value [clang-analyzer-core.NullDereference]
+    *p = 0;
+       ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//test2.c:3:5: note: 'p' declared without an initial value
+    char *p;
+    ^
+/Users/hadar/Desktop/github-plugin/softacheck-dev/../../test_github/test-repo//test2.c:7:8: note: Dereference of undefined pointer value
+    *p = 0;
+       ^
