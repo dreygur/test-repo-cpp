@@ -24,7 +24,7 @@ jobs:
         depth: 1
         submodules: 'recursive'
     - name: cppcheck-runtest
-      uses: dreygur/cppcheck@master
+      uses: dreygur/cppcheck@main
     # - name: Run Cppcheck
     #   uses: Bedzior/run-cppcheck@v1.0.0
     #   with:
