@@ -20,7 +20,7 @@ jobs:
     - name: cppcheck-runtest
       uses: dreygur/cppcheck@main
       with:
-        path: main.c
+        path: './dreg'
     # - name: Run Cppcheck
     #   uses: Bedzior/run-cppcheck@v1.0.0
     #   with:
