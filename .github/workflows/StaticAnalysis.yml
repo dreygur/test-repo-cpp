@@ -19,6 +19,8 @@ jobs:
         submodules: 'recursive'
     - name: cppcheck-runtest
       uses: dreygur/cppcheck@main
+      with:
+        path: main.c
     # - name: Run Cppcheck
     #   uses: Bedzior/run-cppcheck@v1.0.0
     #   with:
@@ -32,16 +34,7 @@ jobs:
     #   with:
     #     name: report
     #     path: output
-        
-# jobs:
-  # linting:
-    # name: cppcheck
-    # runs-on: ubuntu-latest
-    # steps:
-      # - name: c-linter
-        # uses: tonybaloney/cppcheck-action@master
-        # with:
-            # path: './Src'
+ 
 
 # jobs:
   # checkout-and-check-formatting:
