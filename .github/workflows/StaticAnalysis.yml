@@ -14,10 +14,8 @@ jobs:
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
-      with:
-        depth: 1
-        submodules: 'recursive'
     - run: mkdir -p output
+    - run: echo "Hello" > output/hello.txt
     - name: Run Cppcheck
       uses: Bedzior/run-cppcheck@v1.0.0
       with:
