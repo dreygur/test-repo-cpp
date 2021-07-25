@@ -20,7 +20,7 @@ jobs:
     - name: cppcheck-runtest
       uses: dreygur/cppcheck@main
       with:
-        path: './dreg'
+        path: '.'
         enabled checks: all
         enable inconclusive: true
         verbose: true
