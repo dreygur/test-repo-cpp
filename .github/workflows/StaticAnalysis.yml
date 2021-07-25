@@ -24,6 +24,13 @@ jobs:
         enabled checks: all
         enable inconclusive: true
         verbose: true
+    - name: cppcheck-generate-report
+      uses: dreygur/cppcheck@main
+      with:
+        path: '.'
+        enabled checks: all
+        enable inconclusive: true
+        verbose: true
         generate report: true
     - name: Upload report
       uses: actions/upload-artifact@v1
