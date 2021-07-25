@@ -24,9 +24,4 @@ jobs:
         enabled checks: all
         enable inconclusive: true
         verbose: true
-    - name: Upload report
-      uses: actions/upload-artifact@v1
-      with:
-        name: report
-        path: output
         
