@@ -28,5 +28,5 @@ jobs:
       with:
         name: report
         path: output
-    - run: apt-get install cppcheck -y
+    - run: sudo apt-get install cppcheck -y
     - run: sh ./runner.sh
