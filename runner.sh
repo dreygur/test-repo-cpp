@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cppcheck . \
+cppcheck ./dreg \
     --enable=all \
     --inconclusive \
     --verbose \
