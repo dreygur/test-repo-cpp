@@ -1,5 +1,5 @@
 #!/bin/sh
 
 cppcheck . \
-    --enable=yep \
+    --enable=all \
     --error-exitcode=255
