@@ -1,0 +1,32 @@
+name: Test C/C++ Code Quality
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  analyse:
+    name: Run Cppcheck
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+    - run: mkdir -p output
+    - name: Run Cppcheck
+      uses: Bedzior/run-cppcheck@v1.0.0
+      with:
+        enabled checks: all
+        enable inconclusive: true
+        generate report: true
+        path: './dreg/test'
+        verbose: true
+    - name: Upload report
+      uses: actions/upload-artifact@v2
+      with:
+        name: report
+        path: output
+    - run: apt-get install cppcheck -y
+    - run: sh ./runner.sh
