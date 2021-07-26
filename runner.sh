@@ -4,5 +4,6 @@ cppcheck ./dreg \
     --enable=all \
     --inconclusive \
     --verbose \
-    --check-config
+    --check-config \
+    --suppress=missingIncludeSystem . \
     --error-exitcode=255
